@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.site {
+  background: radial-gradient(50% 50% at 50% 50%, rgb(13 110 253 / 25%) 0%, #055160 100%), #055160;
+  color: rgb(0, 0, 0);
+  min-height: 10vh; /* allows room for scrolling to see parallax */
+  height: 100%;
+}
+
+
+.main {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center; /* center content horizontally */
+  align-items: center; /* center content vertically */
+  min-height: 30vh; /* make content as tall as the viewport */
+  max-width: 100%;
+  min-width: 15%;
+}
+
+.container {
+  position: relative;
+}
+
+.heading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 40rem) {
+    .heading {
+        font-size: 2rem;
+        position: absolute;
+        left: 5%;
+        top: 10rem;
+        z-index: 10; /* to be on top of grid */
+    }
+}
+
+mark {
+  color: #FFF;
+  background-color: #000;
+  line-height: 1.35;
+  padding: 6px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.grid-container {
+  margin: 0 auto;
+  padding: 10%;
+  max-width: 34rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.grid__item--bg {
+  grid-column: 2 / span 9;
+  z-index: 0;
+  grid-row: 1 / -1;
+}
+
+.grid__item--portrait-half {
+  grid-column: 6 / span 6;
+  z-index: 2;
+  grid-row: 1 / -1;
+  -webkit-clip-path: polygon(5% 10%, 27% 3%, 94% 25%, 84% 98%, 39% 98%, 11% 98%, 4% 66%, 4% 34%);
+  clip-path: polygon(5% 10%, 27% 3%, 94% 25%, 84% 98%, 39% 98%, 11% 98%, 4% 66%, 4% 34%);
+}
+
+
+ul {
+  display: flex;
+ 
+}
+
+.mainmenu{
+ display: flex;
+  font-size: 20;
+  text-align: center;
+  font-weight: bold;
+  padding-left: 15%;
+  padding-bottom: 15px;
+  float:left;
+}
+
+.social{
+padding-left: 10px;
+padding-right: 10px;
+}
+
+
+.form{width:340px;height:440px;box-shadow: 0 0 40px -10px #e9ecef;margin:calc(50vh - 220px) auto;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
+
+input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
+input:focus{border-bottom:2px solid #78788c}
+button{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #78788c;background:0;color:#5a5a6e;cursor:pointer;transition:all .3s}
