@@ -9,14 +9,16 @@
   padding-left: 15%;
   margin-bottom: 0;
   list-style: none;
+  
 }
 
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
+  color: #0a58ca6b;
 
   @include hover-focus {
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   // Disabled state lightens text
